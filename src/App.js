@@ -8,6 +8,8 @@ import ExpenseList from './components/expenseList';
 import ExpensesTotal from './components/expensesTotal';
 import Budget from './components/budget';
 import Remaining from './components/remaining';
+import AddExpense from './components/addExpense';
+
 //https://www.freecodecamp.org/news/react-budget-tracker-app/
 export default function App() {
   return (
@@ -30,6 +32,12 @@ export default function App() {
           <div className="col-sm">
             <ExpenseList />
           </div>
+        </div>
+      </div>
+      <h3 className="mt-3">Add Expense</h3>
+      <div className="row mt-3">
+        <div className="col-sm">
+          <AddExpense />
         </div>
       </div>
     </div>
