@@ -10,9 +10,12 @@ import Budget from './components/budget';
 import Remaining from './components/remaining';
 import AddExpense from './components/addExpense';
 
+//context
+import { ExpenseDataProvider} from './ExpenseDataContext';
 //https://www.freecodecamp.org/news/react-budget-tracker-app/
 export default function App() {
   return (
+    <ExpenseDataProvider>
     <div className="container">
       <div className="mt-4">
         <Headers />
@@ -41,5 +44,6 @@ export default function App() {
         </div>
       </div>
     </div>
+    </ExpenseDataProvider>
   );
 }
