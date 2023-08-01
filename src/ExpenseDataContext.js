@@ -2,6 +2,21 @@ import React, { createContext, useReducer } from 'react';
 
 const ExpenseReducer = (state, action) => {
   switch (action.type) {
+    case 'ADD_EXPENSE':
+      return {
+        ...state,
+        expenses: [...state.expenses, action.payload],
+      };
+    case 'EDIT_BUDGET':
+      return {
+        ...state,
+        budget: action.payload,
+      };
+    case 'DELETE_EXPENSE':
+      return {
+        ...state,
+        expenses: state.expenses.filter((expense)=> expense.id!=action.payload),
+      };
     default:
       return state;
   }
@@ -9,11 +24,7 @@ const ExpenseReducer = (state, action) => {
 
 const initialState = {
   budget: 2000,
-  expenses: [
-    { id: 1, name: 'shopping', cost: 400 },
-    { id: 2, name: 'Mobile Recharge', cost: 500 },
-    { id: 3, name: 'Electricity', cost: 700 },
-  ],
+  expenses: [],
 };
 //NOTE: the intialState properties do not need to have values, they can be set to empty strings, empty arrays, and so on. We're adding data for visual purposes
 
