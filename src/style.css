@@ -1,11 +1,3 @@
 .budget-style {
   color: green;
 }
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-style: dashed;
-}

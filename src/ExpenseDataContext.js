@@ -15,7 +15,9 @@ const ExpenseReducer = (state, action) => {
     case 'DELETE_EXPENSE':
       return {
         ...state,
-        expenses: state.expenses.filter((expense)=> expense.id!=action.payload),
+        expenses: state.expenses.filter(
+          (expense) => expense.id != action.payload
+        ),
       };
     default:
       return state;
@@ -23,7 +25,7 @@ const ExpenseReducer = (state, action) => {
 };
 
 const initialState = {
-  budget: 2000,
+  budget: 0,
   expenses: [],
 };
 //NOTE: the intialState properties do not need to have values, they can be set to empty strings, empty arrays, and so on. We're adding data for visual purposes
