@@ -2,5 +2,6 @@
 
 A Simple React based expense tracker.
 
-Login and authentication of user is required.
-Database is required for storing all the data.
+1. Implement Routing and build login and sigup pages.
+2. Login and authentication of user is required.
+3. Database is required for storing all the data.
